@@ -1,0 +1,58 @@
+<!-- <div class="content-wrapper" style="background-image: url(/assets/images/p.avif);"> -->
+<div class="content-wrapper">
+
+
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-12 m-10 " style="background-color: rgb(207, 202, 202);">
+
+        <div style="  text-align: center;">
+         
+          
+                    <h3><b>Employee Information</b></h3>
+                
+       
+
+         
+          <table class="table table-bordered border-primary table-sm elevation-4"
+            style="background-color: white;   height:auto ;">
+            <thead class="thead">
+              <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Qualification</th>
+                <th>DepartmentT</th>
+                <th>Birth Date</th>
+                <th>Nationality</th>
+                <th>EMP_History</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of Employees; index as i;">
+                <td>{{employee.id}}</td>
+                <td>{{employee.firstname}}</td>
+                <td>{{employee.lastname}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.qualification}}</td>
+                <td>{{employee.department}}</td>
+                <td>{{getFormattedDate(employee.date_of_birth)}}</td>
+                <td>{{employee.nationality}}</td>
+                <td>{{employee.employeementHistory}}</td>
+                <td>
+                  <button class="btn btn-primary" (click)="editEmployee(employee)">Edit</button>
+                  <button class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->

@@ -1,0 +1,64 @@
+<div class="hold-transition register-page">
+    <div class="register-box">
+
+
+        <div class="card">
+            <div class="card-body register-card-body" style="border: 1px solid; border-radius: 1%; border-color: rgb(6, 91, 128); background-color: rgb(204, 204, 204) ;border-radius:1%;  box-shadow:2px 3px;">
+                <h4 style="color: rgb(100, 98, 98)">
+                <p class="login-box-msg ">Register a new admin</p>
+            </h4> 
+                <form (ngSubmit)="employeesave()">
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="name" [(ngModel)]="empsign.name" name="name"
+                            placeholder="enter your name" required="required">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" id="email" [(ngModel)]="empsign.email" name="email"
+                            placeholder="enter your email" required="required">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" [(ngModel)]="empsign.password" id="password"
+                            name="password" placeholder="enter password" required="required">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fa fa-lock "></span>
+                            </div>
+                        </div>
+                    </div>
+
+               
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                                <label for="agreeTerms">
+                                    I agree to the <a href="#">terms</a>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+                
+                <div class="text-center">Already have a membership <a href="">Login here</a></div>
+            </div>
+            <!-- /.form-box -->
+        </div><!-- /.card -->
+    </div>
+    <!-- /.register-box -->
+</div>

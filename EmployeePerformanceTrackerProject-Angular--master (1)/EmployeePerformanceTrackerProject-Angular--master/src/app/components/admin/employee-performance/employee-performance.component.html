@@ -1,0 +1,94 @@
+<div class="content-wrapper">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-12 elevation-3 ">
+
+        <div style="  text-align: center; background-color: rgb(141, 151, 161)">
+
+          <div  class="px-5">
+            <h3><b>Employee Performance Review Evaluation Table With Ratings</b></h3>
+          </div>        
+
+          <table class="table sortable table-striped table-bordered table-sm "
+            style="background-color:rgb(189, 188, 188); color:whitesmoke;   height:auto ; border: 1px solid black;">
+
+            <thead class="  thead fs-6" style="background-color: rgb(0, 71, 143) ; ">
+              <tr>
+                <th title="id">Id</th>
+                <th title="Firstname">Firstname</th>
+                <th title="Lastname">Lastname</th>
+                <th title="Department">Department</th>
+                <th title="Designation">Designation</th>
+                <th class="th-sm sortable">Ranking</th>
+
+                <th title="Understanding Score">USC</th>
+                <th title="Training Score">TSC</th>
+                <th title="EquiSoft Handle Score">ESHSC</th>
+                <th title="Ruls Policy Follow Score">RPFSC</th>
+                <th title="Knoledge Share With Coworkers Score">KSWCSC</th>
+                <th title="Job Knoledge Comment">JKCommet</th>
+
+
+                <th title="Coworkers Treated Respect Score">CTRSC</th>
+                <th title="Accepts Criticism Score">ACSC</th>
+                <th title="Team Player Score">TPSC</th>
+                <th title="Teame Resources Share Score">TRSSC</th>
+                <th title="Executes Task Score">ETSC</th>
+                <th title="Teamwork Comment">TComment</th>
+
+                <th title="Accepts Mistake Score">AMSC</th>
+                <th title="Can Work Without Supervise Score">WWSSC</th>
+                <th title="Capable Taking Any Decision Score">CTADSC</th>
+                <th title="High Pressure Siruation Manage Score">HPSMSC</th>
+                <th title="Motivate Coworkers To Finish Score">MCToFSC</th>
+                <th title="Leadership Comment">LComment</th>
+
+                <th title="Is Eligible For Promotion">IsEForP</th>
+                <th title="Is Eligible For Termination">IsEForT</th>
+                <th title="Extra Comments">EComments</th>
+
+              </tr>
+            </thead>
+            <tbody style="background-color: lightgrey;  color: #000;">
+              <tr *ngFor="let employee of Employees; index as i;">
+                <td>{{employee.id}}</td>
+                <td>{{employee.firstname}}</td>
+                <td>{{employee.lastname}}</td>
+                <td>{{employee.department}}</td>
+                <td>{{employee.designation}}</td>
+                <!-- <td class="sortable" style="background-color: lightsteelblue;">{{getRank(employee)}}</td> -->
+                <td style="background-color: lightsteelblue;">{{employee.rank}}</td>
+
+                <td>{{employee.requirUnderstandingScore}}</td>
+                <td>{{employee.regardingTrainingScore}}</td>
+                <td>{{employee.equiSoftHandleScore}}</td>
+                <td>{{employee.rulsPolicyFolloScore}}</td>
+                <td>{{employee.knoledgeShareWithCoworkersScore}}</td>
+                <td>{{employee.jobKnoledgeComment}}</td>
+
+                <td>{{employee.coworkersTreatedRespectScore}}</td>
+                <td>{{employee.acceptsCriticismScore}}</td>
+                <td>{{employee.teamPlayerScore}}</td>
+                <td>{{employee.teameResourcesShareScore}}</td>
+                <td>{{employee.executesTaskScore}}</td>
+                <td>{{employee.teamworkComment}}</td>
+
+                <td>{{employee.acceptsMistakeScore}}</td>
+                <td>{{employee.canWorkWithoutSuperviseScore}}</td>
+                <td>{{employee.capableTakingAnyDecisionScore}}</td>
+                <td>{{employee.highPressureSiruationManageScore}}</td>
+                <td>{{employee.motivateCoworkersToFinishScore}}</td>
+                <td>{{employee.leadershipComment}}</td>
+
+                <td>{{employee.isEligibleForPromotion}}</td>
+                <td>{{employee.isEligibleForTermination}}</td>
+                <td>{{employee.extraComments}}</td>
+
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
